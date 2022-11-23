@@ -1,0 +1,35 @@
+body {
+  width: 100%;
+  font-family: "Roboto", "Tahoma", sans-serif;
+  color: var(--primery-text-color);
+  letter-spacing: 0.03em;
+  background-color: #ffffff;
+} 
+p {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  margin: 0;
+}
+h1,
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+}
+.link {
+  text-decoration: none;
+  color: var(--primery-text-color);
+  letter-spacing: 0.02em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+

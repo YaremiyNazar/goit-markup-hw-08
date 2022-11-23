@@ -1,0 +1,28 @@
+//  base
+@import './base/base';
+@import './base/reset.scss';
+
+// units
+@import './utils/variables';
+@import './utils/visually-hidden';
+// components
+@import './components/container';
+// header
+@import './components/page-header';
+// hero
+@import './components/hero';
+// features
+@import './components/features';
+// images-section
+@import './components/image-section';
+// team-sections
+@import './components/team-section';
+// customers-section
+@import './components/customers-section';
+// modal
+@import './components/modal';
+// portfolio
+@import './components/portfolio-section';
+// footer
+@import './components/page-footer'
+
