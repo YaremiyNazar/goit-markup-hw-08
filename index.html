@@ -21,11 +21,24 @@
 
   <body>
     <!-- Шапка -->
-    <!-- <header class="header" data-header>
+    <header class="header" data-header>
       <div class="container header__container">
         <a class="logo header__logo" href=""
           ><span class="logo__style">Web</span>Studio</a
         >
+        <button class="menu__button is-open" type="button" data-menu-button>
+          <svg width="40" height="40" aria-label="mobile-menu">
+            <use
+              class="icon__cross"
+              href="./images/symbol-defs 2.svg#icon-cross"
+            ></use>
+            <use
+              class="icon__menu"
+              href="./images/symbol-defs 2.svg#icon-burger"
+            ></use>
+          </svg>
+        </button>
+        <!-- <div class="header__menu"> -->
         <nav class="nav">
           <ul class="list nav__list">
             <li class="nav__item">
@@ -59,14 +72,15 @@
             </li>
           </ul>
         </div>
+        <!-- </div> -->
       </div>
-    </header> -->
+    </header>
+
     <!-- Унікальний контент -->
     <main>
       <!--Герой("замовити послугу" - кнопка)-->
 
-      <!-- <section class="hero">
-
+      <section class="hero">
         <div class="container hero__container">
           <div class="hero__style">
             <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
@@ -75,10 +89,10 @@
             </button>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!--Список особливостей компанії-->
-      <section class="features features__section">
+      <!-- <section class="features features__section">
         <div class="container">
           <h2 class="visually__hidden">Особливості</h2>
           <ul class="list features__list">
@@ -131,60 +145,130 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--Cекція з фото-посиланням (370*294, jpg)-->
 
-      <!-- <section class="images images__section">
+      <section class="images images__section">
         <div class="container">
           <h2 class="images__title">Чим ми займаємося</h2>
           <ul class="list images__list">
             <li class="images__item">
-              <img
-                src="./images/images_section/img1.jpg"
-                alt="Технічний опис основної структури"
-                width="370"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/images_section/img_lg@1x.webp 1x,
+                    ./images/images_section/img_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="images__item"
+                  src="./images/images_section/img_lg@1x.webp"
+                  alt="Фото-картки команди на екрані ноубука"
+                  width="370"
+                  loading="lazy"
+                />
+              </picture>
               <div class="images__overlay">
                 <p class="images__decor">Десктоп додатки</p>
               </div>
             </li>
             <li class="images__item">
-              <img
-                src="./images/images_section/img2.jpg"
-                alt="Робота дизайнера з макетами"
-                width="370"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/images_section/img_lg@1x-1.webp 1x,
+                    ./images/images_section/img_lg@2x-1.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="images__item"
+                  src="./images/images_section/img_lg@1x-1.webp"
+                  alt="Технічний опис основної структури"
+                  width="370"
+                  loading="lazy"
+                />
+              </picture>
               <div class="images__overlay">
                 <p class="images__decor">Мобільні додатки</p>
               </div>
             </li>
             <li class="images__item">
-              <img
-                src="./images/images_section/img3.jpg"
-                alt="Вибір кольору в палітрі"
-                width="370"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/images_section/img_lg@1x-2.webp 1x,
+                    ./images/images_section/img_lg@2x-2.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="images__item"
+                  src="./images/images_section/img_lg@1x-2.webp"
+                  alt="Вибір кольору в палітрі"
+                  width="370"
+                  loading="lazy"
+                />
+              </picture>
               <div class="images__overlay">
                 <p class="images__decor">Дизайнерські рішення</p>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- секція з фото команди (270*368, jpg)-->
-      <!-- <section class="team team__section">
+      <section class="team team__section">
         <div class="container">
           <h2 class="our__team">Наша команда</h2>
           <ul class="list team__list">
             <li class="team__item">
-              <img
-                class="team__images"
-                src="./images/team_photo/Igor.jpg"
-                alt="Ігор в бурдовій сорочці"
-                width="270"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team_photo/img_lg@1x.webp 1x,
+                    ./images/team_photo/img_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team_photo/img_md@1x.webp 1x,
+                    ./images/team_photo/img_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/team_photo/img_sm@1x.webp 1x,
+                    ./images/team_photo/img_sm@1x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="team__images"
+                  src="./images/team_photo/img_sm@1x.webp"
+                  alt="Ігор в бурдовій сорочці"
+                  width="450"
+                  height="404"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card__space">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
                 <p class="team__text">Product Designer</p>
@@ -249,12 +333,43 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__images"
-                src="./images/team_photo/Olga.jpg"
-                alt="Ольга в темному піджаку"
-                width="270"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team_photo/img_lg@1x-1.webp 1x,
+                    ./images/team_photo/img_lg@2x-1.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team_photo/img_md@1x-1.webp 1x,
+                    ./images/team_photo/img_md@2x-1.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/team_photo/img_sm@1x-1.webp 1x,
+                    ./images/team_photo/img_sm@1x-1.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="team__images"
+                  src="./images/team_photo/img_sm@1x-1.webp"
+                  alt="Ольга в темному піджаку"
+                  width="450"
+                  height="404"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card__space">
                 <h3 class="team__title">Ольга Рєпіна</h3>
                 <p class="team__text">Frontend Developer</p>
@@ -319,12 +434,43 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__images"
-                src="./images/team_photo/Mukola.jpg"
-                alt="Микола в білій сорочці"
-                width="270"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team_photo/img_lg@1x-2.webp 1x,
+                    ./images/team_photo/img_lg@2x-2.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team_photo/img_md@1x-2.webp 1x,
+                    ./images/team_photo/img_md@2x-2.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/team_photo/img_sm@1x-2.webp 1x,
+                    ./images/team_photo/img_sm@1x-2.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="team__images"
+                  src="./images/team_photo/img_sm@1x-2.webp"
+                  alt="Микола в білій сорочці"
+                  width="450"
+                  height="404"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card__space">
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p class="team__text">Marketing</p>
@@ -389,12 +535,43 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__images"
-                src="./images/team_photo/Muhailo.jpg"
-                alt="Михайло в чорній футболці"
-                width="270"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team_photo/img_lg@1x-3.webp 1x,
+                    ./images/team_photo/img_lg@2x-3.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team_photo/img_md@1x-3.webp 1x,
+                    ./images/team_photo/img_md@2x-3.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/team_photo/img_sm@1x-3.webp 1x,
+                    ./images/team_photo/img_sm@1x-3.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="team__images"
+                  src="./images/team_photo/img_sm@1x-3.webp"
+                  alt="Михайло в чорній футболці"
+                  width="450"
+                  height="404"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card__space">
                 <h3 class="team__title">Михайло Єрмаков</h3>
                 <p class="team__text">UI Designer</p>
@@ -461,7 +638,7 @@
           </ul>
         </div>
       </section>
-      <section class="customers customers__section">
+      <!-- <section class="customers customers__section">
         <div class="container">
           <h2 class="customers__title">Постійні клієнти</h2>
           <ul class="list customers__list">
@@ -604,7 +781,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer> 
     <!-- Modal window -->
     <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -666,7 +843,85 @@
           </div>
         </form>
       </div>
-    </div> -->
-    <!-- <script src="./js/modal.js"></script> -->
+    </div>-->
+
+    <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
+<!-- <div class="menu">
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="40" height="40">
+          <use
+            class="icon__cross"
+            href="./images/symbol-defs 2.svg#icon-burger"
+          ></use>
+        </svg>
+      </button>
+
+      <div class="container__menu">
+        <nav class="nav">
+          <ul class="list nav__list">
+            <li class="nav__item">
+              <a class="link nav__link nav__link--current" href="">Студія</a>
+            </li>
+            <li class="nav__item">
+              <a class="link nav__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="nav__item">
+              <a class="link nav__link" href="">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container__menu">
+        <div class="header__contact">
+          <ul class="list contact__list">
+            <li class="contact__item">
+              <a class="link contact__link" href="mailto:info@devstudio.com">
+                <svg class="envelope-icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contact__item">
+              <a class="link contact__link" href="tel:+380961111111">
+                <svg class="smartphone-icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="container__menu">
+          <ul class="list list__social">
+            <li><a href="" class="link__social">instagram</a></li>
+            <li><a href="" class="link__social">twitter</a></li>
+            <li><a href="" class="link__social">facebook</a></li>
+            <li><a href="" class="link__social">linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="menu__container js-container__menu" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40" aria-label="mobile-menu">
+          <use
+            class="icon__cross"
+            href="./images/symbol-defs 2.svg#icon-cross"
+          ></use>
+        </svg>
+      </button>
+    </div> -->

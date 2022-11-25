@@ -1,17 +1,38 @@
+
 .portfolio__section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .list__button {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
-    justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        justify-content: center;
+    }
 }
+// .button__item { 
+//     flex-basis: calc((100% - 16px) / 3);
+//     @media screen and (min-width: 768px) {
+//         flex-basis: calc((100% - 32px) / 5);
+//     }
 
+// }
+// }
 .portfolio__button {
-    display: inline-block;
+    display: flex;
+    min-width: 73px;
     border-radius: 4px;
     padding: 6px 22px;
     min-width: 73px;
@@ -33,17 +54,29 @@
 }
 .portfolio {
     display: flex;
+    width: 100%;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 30px;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
 
     &__item {
-        flex-basis: calc((100% - 60px) / 3);
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 60px) / 3);
+        }
+
+        
     }
     &__link {
-        display: block;
+        display: inline-block;
         text-decoration: none;
         color: inherit;
-        width: 370px;
+        width: 100%;
         height: 404px;
         align-items: center;
         justify-items: center;
@@ -63,6 +96,7 @@
     }
     
     &__image {
+        width: 100%;
         position: relative;
     }
     

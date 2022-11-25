@@ -1,20 +1,29 @@
+
+
 .images__section {
     padding-bottom: 94px;
+    @media screen and(max-width: 1200px) {
+        display: none;
+    }
 }
+
 .images {
     &__title {
-         margin-bottom: 50px;
+        margin-bottom: 50px;
     }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
     }
+
     &__item {
         position: relative;
         width: 370px;
         flex-basis: calc((100% - 60px) / 3);
     }
+
     &__overlay {
         position: absolute;
         bottom: 0;
@@ -27,6 +36,7 @@
         align-items: center;
         justify-content: center;
     }
+
     &__decor {
         font-weight: 700;
         font-size: 14px;
@@ -37,4 +47,8 @@
         color: #ffffff;
     }
 
-}
+}   
+
+
+ 
+ 
