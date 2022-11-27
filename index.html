@@ -26,19 +26,6 @@
         <a class="logo header__logo" href=""
           ><span class="logo__style">Web</span>Studio</a
         >
-        <!-- <button class="menu__button is-open" type="button" data-menu-button>
-          <svg width="40" height="40" aria-label="mobile-menu">
-            <use
-              class="icon__cross"
-              href="./images/symbol-defs 2.svg#icon-cross"
-            ></use>
-            <use
-              class="icon__menu"
-              href="./images/symbol-defs 2.svg#icon-burger"
-            ></use>
-          </svg>
-        </button> -->
-        <!-- <div class="nav__menu" data-menu> -->
         <nav class="nav">
           <ul class="list nav__list">
             <li class="nav__item">
@@ -72,40 +59,24 @@
               </a>
             </li>
           </ul>
-          <!-- <ul class="list menu__social">
-              <li class="menu__item">  <a
-                    class="link menu__link"
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >Instagram</li>
-              <li class="menu__item"> <a
-                    class="link menu__link"
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >Twitter</li>
-              <li class="menu__item"> <a
-                    class="link menu__link"
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >Facebook</li>
-              <li class="menu__item"><a
-                    class="link menu__link"
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >LinkedIn</li>
-            </ul> -->
+ 
         </div>
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu">
+        <svg class="icon__burger" width="40" height="40">
+            <use
+              href="./images/symbol-defs 2.svg#icon-burger">
+            </use>
+        </svg>
+      </button>
       </div>
     </header>
 
     <!-- Унікальний контент -->
     <main>
       <!--Герой("замовити послугу" - кнопка)-->
-
       <section class="hero">
         <div class="container hero__container">
           <div class="hero__style">
@@ -116,9 +87,8 @@
           </div>
         </div>
       </section>
-
       <!--Список особливостей компанії-->
-      <!-- <section class="features features__section">
+      <section class="features features__section">
         <div class="container">
           <h2 class="visually__hidden">Особливості</h2>
           <ul class="list features__list">
@@ -171,10 +141,8 @@
             </li>
           </ul>
         </div>
-      </section> -->
-
+      </section> 
       <!--Cекція з фото-посиланням (370*294, jpg)-->
-
       <section class="images images__section">
         <div class="container">
           <h2 class="images__title">Чим ми займаємося</h2>
@@ -251,7 +219,6 @@
           </ul>
         </div>
       </section>
-
       <!-- секція з фото команди (270*368, jpg)-->
       <section class="team team__section">
         <div class="container">
@@ -664,7 +631,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="customers customers__section">
+      <section class="customers customers__section">
         <div class="container">
           <h2 class="customers__title">Постійні клієнти</h2>
           <ul class="list customers__list">
@@ -712,7 +679,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section> 
     </main>
     <!-- Футер -->
     <footer class="footer">
@@ -872,84 +839,76 @@
         </form>
       </div>
     </div>
-
-    <script src="./js/modal.js"></script>
+    <!-- menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="icon__cross" width="40" height="40" aria-label="mobile-menu">
+          <use href="./images/symbol-defs 2.svg#icon-cross"
+          ></use>
+        </svg>
+      </button>
+      <div class="space__between">
+        <ul class="list menu--nav">
+          <li class="menu__nav--item">
+            <a class="link menu__link menu__link--current" href="">Студія</a>
+          </li>
+          <li class="menu__nav--item">
+            <a class="link menu__link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="menu__nav--item">
+            <a class="link menu__link" href="">Контакти</a>
+          </li>
+        </ul>
+      </div>
+      <div class="space__between">
+        <ul class="list menu__contact">
+          <li class="menu__contact--item">
+            <a class="link menu__tel--link" href="tel:+380961111111">
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="menu__contact--item">
+            <a class="link menu__mail--link" href="mailto:info@devstudio.com">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="list menu__social">
+          <li class="menu__item">
+            <a  class="link menu__link--social"
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noreferrer noopener">Instagram
+          </li>
+          <li class="menu__item">
+            <a  class="link menu__link--social"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer noopener">Twitter
+          </li>
+          <li class="menu__item">
+            <a  class="link  menu__link--social"
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noreferrer noopener">Facebook
+          </li>
+          <li class="menu__item">
+            <a  class="link  menu__link--social"
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noreferrer noopener">LinkedIn
+          </li>
+        </ul>
+      </div>
+    </div>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script defer src="js/mobile-menu.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
-<!-- <div class="menu">
-      <button
-        class="menu-toggle js-open-menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <svg width="40" height="40">
-          <use
-            class="icon__cross"
-            href="./images/symbol-defs 2.svg#icon-burger"
-          ></use>
-        </svg>
-      </button>
 
-      <div class="container__menu">
-        <nav class="nav">
-          <ul class="list nav__list">
-            <li class="nav__item">
-              <a class="link nav__link nav__link--current" href="">Студія</a>
-            </li>
-            <li class="nav__item">
-              <a class="link nav__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="nav__item">
-              <a class="link nav__link" href="">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="container__menu">
-        <div class="header__contact">
-          <ul class="list contact__list">
-            <li class="contact__item">
-              <a class="link contact__link" href="mailto:info@devstudio.com">
-                <svg class="envelope-icon" width="16" height="12">
-                  <use href="./images/symbol-defs.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="contact__item">
-              <a class="link contact__link" href="tel:+380961111111">
-                <svg class="smartphone-icon" width="10" height="16">
-                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="container__menu">
-          <ul class="list list__social">
-            <li><a href="" class="link__social">instagram</a></li>
-            <li><a href="" class="link__social">twitter</a></li>
-            <li><a href="" class="link__social">facebook</a></li>
-            <li><a href="" class="link__social">linkedin</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="menu__container js-container__menu" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
-        <svg width="40" height="40" aria-label="mobile-menu">
-          <use
-            class="icon__cross"
-            href="./images/symbol-defs 2.svg#icon-cross"
-          ></use>
-        </svg>
-      </button>
-    </div> -->
