@@ -166,10 +166,14 @@
 .modal-form-agreement-text {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     color: #757575;
     -webkit-user-select: none;
+    @media screen and (min-width: 1200px) {
+        font-size: 14px; 
+    }
+    
 }
 .modal-form-link {
     color: #2196f3;
